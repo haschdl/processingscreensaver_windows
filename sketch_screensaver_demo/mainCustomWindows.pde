@@ -1,8 +1,14 @@
 /*
- * Purpose: turn Processing sketch into a screen saver for Windows. It will not work for 
+ * Purpose: turns an exported application from Processing IDE into a screen saver for Windows. 
  * 
- *
- *
+ * HOW TO USE: create your animation as usual using the main tab, and once you are ready to export
+ * the application, rename the function below to 'main(string[] args), then export the application as 
+ * usual (File -> Export Application).
+ * 
+ * LIMITATIONS: including a custom "main" function, as exemplified in this file, will break Processing
+ * file loading operations, such as loadImage() and loadShader(), and the sketch will not run from the IDE.
+ * Two possible workarounds: 1)  remove or rename the main function 2) use an absolute path for the file
+ * loading operations.
  */
 
 import com.sun.jna.platform.win32.User32;
@@ -13,7 +19,11 @@ import com.sun.jna.platform.win32.WinDef.POINT;
 import com.sun.jna.platform.win32.WinUser;
 
 
-static public void main(String[] args) {
+/**
+ * Rename to 'main' before exporting the application.
+ * 
+ */
+static public void mainRENAME(String[] args) {
 
 
   //Processing specific arguments. The last argument must match the sketch name, otherwise you get a ClassNotFoundException

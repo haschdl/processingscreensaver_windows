@@ -8,11 +8,14 @@ void setup() {
   buffer = createGraphics(width, height, P2D);
   background(255);
 
-
-  println(sketchPath(""));
-
-  //C:\\CreativeCoding\\Processing\\sketch_screensaver_demo\\data\\
+  /*
+  Note: giving a relative path to loadShader() will not work
+  if your sketch includes a custom main() function
+  */
+  
   voronoiShader = loadShader("voronoi.frag");
+  
+  
   voronoiShader.set("iResolution", float(width), float(height));
 }
 

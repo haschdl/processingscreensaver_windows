@@ -10,7 +10,7 @@ The code and techniques described here are not meant as a guideline or "best-pra
 
 1. Download [JNA library](https://github.com/java-native-access/jna/releases). I used version `jna-4.5.2.jar`  
 2. In Processing, create a new sketch, or save a copy of an existing one.
-3. Copy the jar file to a sub-folder `code` inside your sketch. The `code` folder lies in the same level as your `.pde` file(s) and next to e.g. `data` folder
+3. Copy the JNA jar file to a sub-folder `code` inside your sketch. The `code` folder lies in the same level as your `.pde` file(s) and next to e.g. `data` folder
 4. Add a new tab and copy and paste the contents of the file `mainCustomWindows.pde`.
 5. In the new tab, replace `sketch_screensaver_demo` with the exact name of your sketch
 6. From processing Export the application as `.exe`
@@ -42,7 +42,8 @@ You can turn a Windows executable file by renaming from `.exe` to `.scr`. After 
 
 ![Windows, rename file](images/2018-08-07-11-05-16.png)
 
-`Install` opens Windows screen saver settings dialog:
+`Install` opens Windows screen saver settings dialog:  
+
 ![Windows, screen saver settings dialog](images/2018-08-07-11-07-24.png)
 
 The changes we will make in Processing is to allow the `Settings...` and `Preview` options to work properly.  
